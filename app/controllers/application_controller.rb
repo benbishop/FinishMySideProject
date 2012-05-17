@@ -19,4 +19,10 @@ class ApplicationController < ActionController::Base
   def terms_of_use
     render :template => 'application/terms_of_use'
   end
+
+  def project
+    @project_id = params[:id]
+    @unfinished_project = UnfinishedProject.find_by_id(@project_id)
+    render :template => 'application/project'
+  end
 end

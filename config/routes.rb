@@ -7,6 +7,7 @@ FinishMySideProject::Application.routes.draw do
   match '/about' => 'application#about'
   match '/privacy_policy' => 'application#privacy_policy'
   match '/terms_of_use' => 'application#terms_of_use'
+  match '/project/:id' => 'application#project'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

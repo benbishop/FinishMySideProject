@@ -1,0 +1,16 @@
+<div class="span12 projectPost">
+
+  <h2><%= @unfinished_project.title %></h2>
+  <a href="#" class="thumbnail projectThumbnail">
+    <%= image_tag @unfinished_project.image_url %>
+  </a>
+
+  <h4>Description:</h4>
+
+  <p><%= @unfinished_project.description %></p>
+
+  <h4>Repository Link</h4>
+  <a href="#"><%= @unfinished_project.repo_url %></a>
+
+  <p><a class="btn" href="#">View details &raquo;</a></p>
+</div>
