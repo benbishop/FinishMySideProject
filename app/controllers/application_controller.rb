@@ -1,5 +1,21 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  def index
+    render :template => 'application/index'
+  end
 
+
+  def about
+    render :template => 'application/about'
+  end
+
+
+  def privacy_policy
+    render :template => 'application/privacy_policy'
+  end
+
+  def terms_of_use
+    render :template => 'application/terms_of_use'
+  end
 end
