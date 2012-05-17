@@ -2,6 +2,8 @@ FinishMySideProject::Application.routes.draw do
 
   resources :application
 
+  resources :unfinished_projects
+
   match '/about' => 'application#about'
   match '/privacy_policy' => 'application#privacy_policy'
   match '/terms_of_use' => 'application#terms_of_use'

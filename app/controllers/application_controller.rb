@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def index
+    @projects = UnfinishedProject.all
     render :template => 'application/index'
   end
 

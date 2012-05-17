@@ -1,0 +1,29 @@
+<h1>Listing unfinished_projects</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Repo url</th>
+    <th>Image url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @unfinished_projects.each do |unfinished_project| %>
+  <tr>
+    <td><%= unfinished_project.title %></td>
+    <td><%= unfinished_project.description %></td>
+    <td><%= unfinished_project.repo_url %></td>
+    <td><%= unfinished_project.image_url %></td>
+    <td><%= link_to 'Show', unfinished_project %></td>
+    <td><%= link_to 'Edit', edit_unfinished_project_path(unfinished_project) %></td>
+    <td><%= link_to 'Destroy', unfinished_project, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Unfinished project', new_unfinished_project_path %>

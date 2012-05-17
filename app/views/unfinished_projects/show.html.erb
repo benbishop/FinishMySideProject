@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @unfinished_project.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @unfinished_project.description %>
+</p>
+
+<p>
+  <b>Repo url:</b>
+  <%= @unfinished_project.repo_url %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @unfinished_project.image_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_unfinished_project_path(@unfinished_project) %> |
+<%= link_to 'Back', unfinished_projects_path %>
