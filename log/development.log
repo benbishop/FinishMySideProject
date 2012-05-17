@@ -6981,3 +6981,311 @@ Served asset /bootstrap.min.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-17 10:11:50 -0500
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/project/1" for 127.0.0.1 at 2012-05-17 10:12:26 -0500
+Processing by ApplicationController#project as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUnfinishedProject Load (0.2ms)[0m  SELECT "unfinished_projects".* FROM "unfinished_projects" WHERE "unfinished_projects"."id" = 1 LIMIT 1
+  Rendered application/project.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-05-17 10:12:26 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-05-17 10:12:26 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-05-17 10:12:26 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-17 10:12:26 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-17 10:12:26 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-05-17 10:12:26 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-05-17 10:12:26 -0500
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-17 10:12:26 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUnfinishedProjects (20120517144607)
+Migrating to AddShortNameToUnfinishedProject (20120517151407)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUnfinishedProjects (20120517144607)
+Migrating to AddShortNameToUnfinishedProject (20120517151407)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUnfinishedProjects (20120517144607)
+Migrating to AddShortNameToUnfinishedProject (20120517151914)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "unfinished_projects" ADD "short_name" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120517151914')[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("unfinished_projects")[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (2.9ms)[0m  DELETE FROM "unfinished_projects"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.5ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 17 May 2012 15:20:15 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_0"], ["short_name", "project_0"], ["title", "Project 0"], ["updated_at", Thu, 17 May 2012 15:20:15 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 17 May 2012 15:20:15 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_1"], ["short_name", "project_1"], ["title", "Project 1"], ["updated_at", Thu, 17 May 2012 15:20:15 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 17 May 2012 15:20:15 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_2"], ["short_name", "project_2"], ["title", "Project 2"], ["updated_at", Thu, 17 May 2012 15:20:15 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 17 May 2012 15:20:15 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_3"], ["short_name", "project_3"], ["title", "Project 3"], ["updated_at", Thu, 17 May 2012 15:20:15 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 17 May 2012 15:20:15 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_4"], ["short_name", "project_4"], ["title", "Project 4"], ["updated_at", Thu, 17 May 2012 15:20:15 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 17 May 2012 15:20:15 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_5"], ["short_name", "project_5"], ["title", "Project 5"], ["updated_at", Thu, 17 May 2012 15:20:15 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 17 May 2012 15:20:15 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_6"], ["short_name", "project_6"], ["title", "Project 6"], ["updated_at", Thu, 17 May 2012 15:20:15 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 17 May 2012 15:20:15 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_7"], ["short_name", "project_7"], ["title", "Project 7"], ["updated_at", Thu, 17 May 2012 15:20:15 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 17 May 2012 15:20:15 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_8"], ["short_name", "project_8"], ["title", "Project 8"], ["updated_at", Thu, 17 May 2012 15:20:15 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 17 May 2012 15:20:15 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_9"], ["short_name", "project_9"], ["title", "Project 9"], ["updated_at", Thu, 17 May 2012 15:20:15 UTC +00:00]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 17 May 2012 15:20:15 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_10"], ["short_name", "project_10"], ["title", "Project 10"], ["updated_at", Thu, 17 May 2012 15:20:15 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/project/1" for 127.0.0.1 at 2012-05-17 10:21:15 -0500
+Processing by ApplicationController#project as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUnfinishedProject Load (0.1ms)[0m  [1mSELECT "unfinished_projects".* FROM "unfinished_projects" WHERE "unfinished_projects"."short_name" IS NULL LIMIT 1[0m
+  Rendered application/project.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="span12 projectPost">
+    2: 
+    3:   <h2><%= @unfinished_project.title %></h2>
+    4:   <a href="#" class="thumbnail projectThumbnail">
+    5:     <%= image_tag @unfinished_project.image_url %>
+    6:   </a>
+  app/views/application/project.html.erb:3:in `_app_views_application_project_html_erb___818645586228144220_70185077371680'
+  app/controllers/application_controller.rb:25:in `project'
+
+
+  Rendered /Users/Ben/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /Users/Ben/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/Ben/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.7ms)
+
+
+Started GET "/project/1" for 127.0.0.1 at 2012-05-17 10:21:16 -0500
+Processing by ApplicationController#project as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUnfinishedProject Load (0.2ms)[0m  SELECT "unfinished_projects".* FROM "unfinished_projects" WHERE "unfinished_projects"."short_name" IS NULL LIMIT 1
+  Rendered application/project.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="span12 projectPost">
+    2: 
+    3:   <h2><%= @unfinished_project.title %></h2>
+    4:   <a href="#" class="thumbnail projectThumbnail">
+    5:     <%= image_tag @unfinished_project.image_url %>
+    6:   </a>
+  app/views/application/project.html.erb:3:in `_app_views_application_project_html_erb___818645586228144220_70185077371680'
+  app/controllers/application_controller.rb:25:in `project'
+
+
+  Rendered /Users/Ben/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/Ben/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Ben/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/project/1" for 127.0.0.1 at 2012-05-17 10:21:16 -0500
+Processing by ApplicationController#project as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUnfinishedProject Load (0.1ms)[0m  [1mSELECT "unfinished_projects".* FROM "unfinished_projects" WHERE "unfinished_projects"."short_name" IS NULL LIMIT 1[0m
+  Rendered application/project.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="span12 projectPost">
+    2: 
+    3:   <h2><%= @unfinished_project.title %></h2>
+    4:   <a href="#" class="thumbnail projectThumbnail">
+    5:     <%= image_tag @unfinished_project.image_url %>
+    6:   </a>
+  app/views/application/project.html.erb:3:in `_app_views_application_project_html_erb___818645586228144220_70185077371680'
+  app/controllers/application_controller.rb:25:in `project'
+
+
+  Rendered /Users/Ben/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/Ben/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Ben/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-17 10:21:21 -0500
+Processing by ApplicationController#index as HTML
+  [1m[35mUnfinishedProject Load (0.2ms)[0m  SELECT "unfinished_projects".* FROM "unfinished_projects" 
+  Rendered application/index.erb within layouts/application (4.2ms)
+Completed 200 OK in 17ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-05-17 10:21:21 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-05-17 10:21:21 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-05-17 10:21:21 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-17 10:21:21 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-05-17 10:21:21 -0500
+Served asset /bootstrap.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-17 10:21:21 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-05-17 10:21:21 -0500
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-17 10:21:21 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-17 10:21:23 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mUnfinishedProject Load (0.2ms)[0m  [1mSELECT "unfinished_projects".* FROM "unfinished_projects" [0m
+  Rendered application/index.erb within layouts/application (3.6ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-05-17 10:21:23 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-05-17 10:21:23 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-05-17 10:21:23 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-17 10:21:23 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-05-17 10:21:23 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-17 10:21:23 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-17 10:21:23 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-05-17 10:21:23 -0500
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/project/project_2" for 127.0.0.1 at 2012-05-17 10:21:49 -0500
+Processing by ApplicationController#project as HTML
+  Parameters: {"id"=>"project_2"}
+  [1m[35mUnfinishedProject Load (0.2ms)[0m  SELECT "unfinished_projects".* FROM "unfinished_projects" WHERE "unfinished_projects"."short_name" IS NULL LIMIT 1
+  Rendered application/project.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="span12 projectPost">
+    2: 
+    3:   <h2><%= @unfinished_project.title %></h2>
+    4:   <a href="#" class="thumbnail projectThumbnail">
+    5:     <%= image_tag @unfinished_project.image_url %>
+    6:   </a>
+  app/views/application/project.html.erb:3:in `_app_views_application_project_html_erb___818645586228144220_70185077371680'
+  app/controllers/application_controller.rb:25:in `project'
+
+
+  Rendered /Users/Ben/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /Users/Ben/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/Ben/.rvm/gems/ruby-1.9.3-p0/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/project/project_2" for 127.0.0.1 at 2012-05-17 10:22:05 -0500
+Processing by ApplicationController#project as HTML
+  Parameters: {"short_name"=>"project_2"}
+  [1m[36mUnfinishedProject Load (0.1ms)[0m  [1mSELECT "unfinished_projects".* FROM "unfinished_projects" WHERE "unfinished_projects"."short_name" = 'project_2' LIMIT 1[0m
+  Rendered application/project.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-05-17 10:22:05 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-05-17 10:22:05 -0500
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-05-17 10:22:05 -0500
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-17 10:22:05 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-05-17 10:22:05 -0500
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-17 10:22:05 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-05-17 10:22:05 -0500
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-17 10:22:05 -0500
+Served asset /application.js - 304 Not Modified (0ms)

@@ -21,8 +21,7 @@ class ApplicationController < ActionController::Base
   end
 
   def project
-    @project_id = params[:id]
-    @unfinished_project = UnfinishedProject.find_by_id(@project_id)
+    @unfinished_project = UnfinishedProject.find_by_short_name(params[:short_name])
     render :template => 'application/project'
   end
 end

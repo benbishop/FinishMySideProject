@@ -29,7 +29,7 @@
 
           <h4>Repository Link</h4>
           <a href="#"><%= unfinished_project.repo_url %></a>
-          <p><%=  link_to 'View details', project_path + '/' + unfinished_project.id.to_s, {class:'btn'} %></p>
+          <p><%=  link_to 'View details', project_path + '/' + unfinished_project.short_name, {class:'btn'} %></p>
         </div>
   <% end %>
 
