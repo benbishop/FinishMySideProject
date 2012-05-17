@@ -12,6 +12,11 @@
  *= require_tree .
 */
 
-.container{
+.projectThumbnail{
+    float: left;
+    margin-right: 10px;
+}
 
+.projectPost{
+    margin-top: 30px;
 }
