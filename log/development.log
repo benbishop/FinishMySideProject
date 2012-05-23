@@ -7289,3 +7289,226 @@ Served asset /bootstrap.min.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-17 10:22:05 -0500
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-23 09:14:04 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mUnfinishedProject Load (0.3ms)[0m  [1mSELECT "unfinished_projects".* FROM "unfinished_projects" [0m
+  Rendered application/index.erb within layouts/application (2112.5ms)
+Completed 500 Internal Server Error in 2581ms
+
+ActionView::Template::Error (undefined local variable or method `project_path' for #<#<Class:0x007fef68e65a78>:0x007fef68e6e010>):
+    29: 
+    30:           <h4>Repository Link</h4>
+    31:           <a href="#"><%= unfinished_project.repo_url %></a>
+    32:           <p><%=  link_to 'View details', project_path + '/' + unfinished_project.short_name, {class:'btn'} %></p>
+    33:         </div>
+    34:   <% end %>
+    35: 
+  app/views/application/index.erb:32:in `block in _app_views_application_index_erb___4430848108269708030_70333126744720'
+  app/views/application/index.erb:19:in `each'
+  app/views/application/index.erb:19:in `_app_views_application_index_erb___4430848108269708030_70333126744720'
+  app/controllers/application_controller.rb:6:in `index'
+
+
+  Rendered /Users/ben/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.6ms)
+  Rendered /Users/ben/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+  Rendered /Users/ben/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.2ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (2.3ms)[0m  DELETE FROM "unfinished_projects"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (80.6ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 23 May 2012 14:14:50 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_0"], ["short_name", "project_0"], ["title", "Project 0"], ["updated_at", Wed, 23 May 2012 14:14:50 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 23 May 2012 14:14:51 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_1"], ["short_name", "project_1"], ["title", "Project 1"], ["updated_at", Wed, 23 May 2012 14:14:51 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 23 May 2012 14:14:51 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_2"], ["short_name", "project_2"], ["title", "Project 2"], ["updated_at", Wed, 23 May 2012 14:14:51 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 23 May 2012 14:14:51 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_3"], ["short_name", "project_3"], ["title", "Project 3"], ["updated_at", Wed, 23 May 2012 14:14:51 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 23 May 2012 14:14:51 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_4"], ["short_name", "project_4"], ["title", "Project 4"], ["updated_at", Wed, 23 May 2012 14:14:51 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 23 May 2012 14:14:51 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_5"], ["short_name", "project_5"], ["title", "Project 5"], ["updated_at", Wed, 23 May 2012 14:14:51 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 23 May 2012 14:14:51 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_6"], ["short_name", "project_6"], ["title", "Project 6"], ["updated_at", Wed, 23 May 2012 14:14:51 UTC +00:00]]
+  [1m[36m (3.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 23 May 2012 14:14:51 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_7"], ["short_name", "project_7"], ["title", "Project 7"], ["updated_at", Wed, 23 May 2012 14:14:51 UTC +00:00]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 23 May 2012 14:14:51 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_8"], ["short_name", "project_8"], ["title", "Project 8"], ["updated_at", Wed, 23 May 2012 14:14:51 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 23 May 2012 14:14:51 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_9"], ["short_name", "project_9"], ["title", "Project 9"], ["updated_at", Wed, 23 May 2012 14:14:51 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 23 May 2012 14:14:51 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_10"], ["short_name", "project_10"], ["title", "Project 10"], ["updated_at", Wed, 23 May 2012 14:14:51 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUnfinishedProjects (20120517144607)
+Migrating to AddShortNameToUnfinishedProject (20120517151914)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("unfinished_projects")
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (3.1ms)[0m  DELETE FROM "unfinished_projects"
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.5ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 23 May 2012 14:15:35 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_0"], ["short_name", "project_0"], ["title", "Project 0"], ["updated_at", Wed, 23 May 2012 14:15:35 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 23 May 2012 14:15:35 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_1"], ["short_name", "project_1"], ["title", "Project 1"], ["updated_at", Wed, 23 May 2012 14:15:35 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 23 May 2012 14:15:35 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_2"], ["short_name", "project_2"], ["title", "Project 2"], ["updated_at", Wed, 23 May 2012 14:15:35 UTC +00:00]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 23 May 2012 14:15:35 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_3"], ["short_name", "project_3"], ["title", "Project 3"], ["updated_at", Wed, 23 May 2012 14:15:35 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 23 May 2012 14:15:35 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_4"], ["short_name", "project_4"], ["title", "Project 4"], ["updated_at", Wed, 23 May 2012 14:15:35 UTC +00:00]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 23 May 2012 14:15:35 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_5"], ["short_name", "project_5"], ["title", "Project 5"], ["updated_at", Wed, 23 May 2012 14:15:35 UTC +00:00]]
+  [1m[35m (6.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 23 May 2012 14:15:35 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_6"], ["short_name", "project_6"], ["title", "Project 6"], ["updated_at", Wed, 23 May 2012 14:15:35 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 23 May 2012 14:15:35 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_7"], ["short_name", "project_7"], ["title", "Project 7"], ["updated_at", Wed, 23 May 2012 14:15:35 UTC +00:00]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.5ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 23 May 2012 14:15:35 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_8"], ["short_name", "project_8"], ["title", "Project 8"], ["updated_at", Wed, 23 May 2012 14:15:35 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 23 May 2012 14:15:35 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_9"], ["short_name", "project_9"], ["title", "Project 9"], ["updated_at", Wed, 23 May 2012 14:15:35 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "unfinished_projects" ("created_at", "description", "image_url", "repo_url", "short_name", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 23 May 2012 14:15:35 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae libero et nisl adipiscing laoreet. Nulla sagittis faucibus cursus. Vestibulum cursus ultrices leo id accumsan. Sed a augue magna. Ut euismod, leo eget porttitor elementum, urna felis iaculis quam, nec scelerisque enim velit sit amet quam. Nullam condimentum commodo auctor. Nunc vel magna nec orci vehicula consequat nec quis nunc. Duis congue hendrerit ante, eu dapibus est mattis non. In porttitor imperdiet pretium. Pellentesque iaculis tellus eu orci vestibulum id auctor diam viverra. Pellentesque pharetra, nibh ac volutpat adipiscing, nisl ipsum consequat eros, a semper nulla risus non ligula. Integer pulvinar arcu felis."], ["image_url", "http://placehold.it/260x180"], ["repo_url", "http://github.com/project_10"], ["short_name", "project_10"], ["title", "Project 10"], ["updated_at", Wed, 23 May 2012 14:15:35 UTC +00:00]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-23 09:15:39 -0500
+Processing by ApplicationController#index as HTML
+  [1m[35mUnfinishedProject Load (0.3ms)[0m  SELECT "unfinished_projects".* FROM "unfinished_projects" 
+  Rendered application/index.erb within layouts/application (514.0ms)
+Completed 500 Internal Server Error in 535ms
+
+ActionView::Template::Error (undefined local variable or method `project_path' for #<#<Class:0x007fef6a16df58>:0x007fef6a16b320>):
+    29: 
+    30:           <h4>Repository Link</h4>
+    31:           <a href="#"><%= unfinished_project.repo_url %></a>
+    32:           <p><%=  link_to 'View details', project_path + '/' + unfinished_project.short_name, {class:'btn'} %></p>
+    33:         </div>
+    34:   <% end %>
+    35: 
+  app/views/application/index.erb:32:in `block in _app_views_application_index_erb___4430848108269708030_70333126744720'
+  app/views/application/index.erb:19:in `each'
+  app/views/application/index.erb:19:in `_app_views_application_index_erb___4430848108269708030_70333126744720'
+  app/controllers/application_controller.rb:6:in `index'
+
+
+  Rendered /Users/ben/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.4ms)
+  Rendered /Users/ben/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/ben/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-23 09:16:28 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mUnfinishedProject Load (0.3ms)[0m  [1mSELECT "unfinished_projects".* FROM "unfinished_projects" [0m
+  Rendered application/index.erb within layouts/application (2186.2ms)
+Completed 500 Internal Server Error in 2190ms
+
+ActionView::Template::Error (undefined local variable or method `project_path' for #<#<Class:0x007fef6a16df58>:0x007fef6a1db5a8>):
+    29: 
+    30:           <h4>Repository Link</h4>
+    31:           <a href="#"><%= unfinished_project.repo_url %></a>
+    32:           <p><%=  link_to 'View details', project_path + '/' + unfinished_project.short_name, {class:'btn'} %></p>
+    33:         </div>
+    34:   <% end %>
+    35: 
+  app/views/application/index.erb:32:in `block in _app_views_application_index_erb___4430848108269708030_70333126744720'
+  app/views/application/index.erb:19:in `each'
+  app/views/application/index.erb:19:in `_app_views_application_index_erb___4430848108269708030_70333126744720'
+  app/controllers/application_controller.rb:6:in `index'
+
+
+  Rendered /Users/ben/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.5ms)
+  Rendered /Users/ben/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/ben/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-23 09:16:31 -0500
+Processing by ApplicationController#index as HTML
+  [1m[35mUnfinishedProject Load (0.3ms)[0m  SELECT "unfinished_projects".* FROM "unfinished_projects" 
+  Rendered application/index.erb within layouts/application (501.8ms)
+Completed 500 Internal Server Error in 508ms
+
+ActionView::Template::Error (undefined local variable or method `project_path' for #<#<Class:0x007fef6a16df58>:0x007fef6a1a4f80>):
+    29: 
+    30:           <h4>Repository Link</h4>
+    31:           <a href="#"><%= unfinished_project.repo_url %></a>
+    32:           <p><%=  link_to 'View details', project_path + '/' + unfinished_project.short_name, {class:'btn'} %></p>
+    33:         </div>
+    34:   <% end %>
+    35: 
+  app/views/application/index.erb:32:in `block in _app_views_application_index_erb___4430848108269708030_70333126744720'
+  app/views/application/index.erb:19:in `each'
+  app/views/application/index.erb:19:in `_app_views_application_index_erb___4430848108269708030_70333126744720'
+  app/controllers/application_controller.rb:6:in `index'
+
+
+  Rendered /Users/ben/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
+  Rendered /Users/ben/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/ben/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-05-23 09:17:10 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mUnfinishedProject Load (1.7ms)[0m  [1mSELECT "unfinished_projects".* FROM "unfinished_projects" [0m
+  Rendered application/index.erb within layouts/application (15.1ms)
+Compiled bootstrap-responsive.css  (12ms)  (pid 77910)
+Compiled bootstrap.css  (0ms)  (pid 77910)
+Compiled application.css  (356ms)  (pid 77910)
+Compiled jquery.js  (2ms)  (pid 77910)
+Compiled jquery_ujs.js  (2ms)  (pid 77910)
+Compiled bootstrap.js  (5ms)  (pid 77910)
+Compiled bootstrap.min.js  (2ms)  (pid 77910)
+Compiled application.js  (247ms)  (pid 77910)
+Completed 200 OK in 891ms (Views: 888.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-05-23 09:17:11 -0500
+Served asset /bootstrap-responsive.css - 200 OK (23ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-05-23 09:17:11 -0500
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-05-23 09:17:11 -0500
+Served asset /bootstrap.js - 200 OK (94ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-05-23 09:17:11 -0500
+Served asset /jquery.js - 200 OK (8ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-05-23 09:17:11 -0500
+Served asset /bootstrap.css - 200 OK (13ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-05-23 09:17:11 -0500
+Served asset /bootstrap.min.js - 200 OK (120ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-23 09:17:11 -0500
+Served asset /application.js - 200 OK (9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-05-23 09:17:11 -0500
+Served asset /application.css - 200 OK (6ms)
